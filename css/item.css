@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #202325;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .content {
+  background-color: #2d3235;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+body .content .images {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  background-image: url(/images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body .content .images .box {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  top: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .content .images .box img {
+  margin: 0 10px;
+  height: 90px;
+  cursor: pointer;
+}
+body .content .images .box img:hover {
+  height: 110px;
+  margin: 0 5px;
+}
+body .content .stuff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input[type="checkbox"] {
+  position: relative;
+  width: 90px;
+  height: 30px;
+  -webkit-appearance: none;
+  background-image: linear-gradient(0deg, #333, #000);
+  outline: none;
+  border-radius: 20px;
+  box-shadow: 0 0 0 2px #353535, 0 0 0 3px #3e3e3e,
+    inset 0 0 8px rgba(0, 0, 0, 1), 0 3px 15px rgba(0, 0, 0, 0.5),
+    inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+input:checked[type="checkbox"] {
+  background-image: linear-gradient(
+    0deg,
+    rgb(238, 231, 231),
+    rgb(255, 234, 234)
+  );
+}
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 30px;
+  background-image: linear-gradient(0deg, #000, #333);
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px #232323;
+  transform: scale(0.98, 0.96);
+  transition: 0.5s;
+}
+input:checked[type="checkbox"]::before {
+  left: 30px;
+}
+input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 40px;
+  width: 4px;
+  height: 4px;
+  background-image: linear-gradient(0deg, #333, #000);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+input:checked[type="checkbox"]::after {
+  left: 70px;
+  background: white;
+}
