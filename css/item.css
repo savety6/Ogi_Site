@@ -21,12 +21,33 @@ body .content .images {
   position: relative;
   height: 500px;
   width: 500px;
-  background-image: url(/images/bg.jpg);
+  background: white;
   background-size: cover;
   background-repeat: no-repeat;
 }
-body .content .images .box {
+body .content .images .big_img {
+  display: none;
   position: relative;
+  width: 100%;
+  height: 100%;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+body .content .images .box {
+  position: absolute;
   height: 100px;
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
@@ -34,6 +55,9 @@ body .content .images .box {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.demo:hover {
+  opacity: 1;
 }
 body .content .images .box img {
   margin: 0 10px;
@@ -45,14 +69,65 @@ body .content .images .box img:hover {
   margin: 0 5px;
 }
 body .content .stuff {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+body .content .stuff .title {
+  padding: 10px 0;
+}
+body .content .stuff .title h1 {
+  position: relative;
+  color: white;
+  font-size: 2em;
+  margin: 0 10%;
+  float: left;
+}
+body .content .stuff .title p {
+  position: relative;
+  color: greenyellow;
+  font-size: 2em;
+  margin: 0 10%;
+  float: right;
+}
+body .content .stuff .text {
+  position: relative;
+  width: 450px;
+  left: 25px;
+  font-size: 1.5em;
+  color: white;
+}
+body .content .stuff .btns {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+body .content .stuff .btns p {
+  color: white;
+  font-size: 20px;
+}
+body .content .stuff .btns .buy {
+  width: 10vw;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 700;
+  transition: 0.5s;
+  box-shadow: 0 0 0 5px rgba (0, 0, 0, 0.8), inset 0 0 0 3px black;
+}
+body .content .stuff .btns .buy:hover {
+  background: white;
+  color: #000;
+}
+
 input[type="checkbox"] {
+  margin: 0 10px;
   position: relative;
-  width: 90px;
-  height: 30px;
+  width: 60px;
+  height: 20px;
   -webkit-appearance: none;
   background-image: linear-gradient(0deg, #333, #000);
   outline: none;
@@ -73,8 +148,8 @@ input[type="checkbox"]::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 60px;
-  height: 30px;
+  width: 40px;
+  height: 20px;
   background-image: linear-gradient(0deg, #000, #333);
   border-radius: 20px;
   box-shadow: 0 0 0 1px #232323;
@@ -82,13 +157,13 @@ input[type="checkbox"]::before {
   transition: 0.5s;
 }
 input:checked[type="checkbox"]::before {
-  left: 30px;
+  left: 20px;
 }
 input[type="checkbox"]::after {
   content: "";
   position: absolute;
   top: calc(50% - 2px);
-  left: 40px;
+  left: 30px;
   width: 4px;
   height: 4px;
   background-image: linear-gradient(0deg, #333, #000);
@@ -96,6 +171,6 @@ input[type="checkbox"]::after {
   transition: 0.5s;
 }
 input:checked[type="checkbox"]::after {
-  left: 70px;
+  left: 50px;
   background: white;
 }

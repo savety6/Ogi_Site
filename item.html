@@ -9,19 +9,58 @@
   <body>
     <div class="content">
       <div class="images">
+        <img class="big_img" src="images/src/1.png" alt="image" />
+        <img class="big_img" src="images/src/2.png" alt="image" />
+        <img class="big_img" src="images/src/3.png" alt="image" />
+        <img class="big_img" src="images/src/4.png" alt="image" />
         <div class="box">
-          <img src="images/src/1.png" alt="image" />
-          <img src="images/src/1.png" alt="image" />
-          <img src="images/src/1.png" alt="image" />
-          <img src="images/src/1.png" alt="image" />
+          <img
+            class="demo cursor"
+            src="images/src/1.png"
+            alt="image"
+            onclick="currentSlide(1)"
+          />
+          <img
+            class="demo cursor"
+            src="images/src/2.png"
+            alt="image"
+            onclick="currentSlide(2)"
+          />
+          <img
+            class="demo cursor"
+            src="images/src/3.png"
+            alt="image"
+            onclick="currentSlide(3)"
+          />
+          <img
+            class="demo cursor"
+            src="images/src/4.png"
+            alt="image"
+            onclick="currentSlide(4)"
+          />
         </div>
       </div>
 
       <div class="stuff">
+        <div class="title">
+          <h1>Сач</h1>
+          <p>10.00лв</p>
+        </div>
+        <div class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, a?
+          Reiciendis blanditiis necessitatibus soluta, id expedita voluptates
+          officiis nemo veritatis ipsum natus exercitationem veniam sapiente
+          voluptatem quasi libero delectus vel!
+        </div>
         <div class="btns">
+          <p>поставка</p>
           <input type="checkbox" name="btn" />
+          <p>капак</p>
+          <input type="checkbox" name="btn" />
+          <div class="buy">купи</div>
         </div>
       </div>
     </div>
   </body>
+  <script src="js/item_change.js"></script>
 </html>
